@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WELCOME</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function random_number()
+	{
+		var a= new Date();
+		var b=a.getTime();
+		var random=b%100;
+		console.log(random);
+		var input=document.getElementById("userinput").value ;
+		console.log(input);
+		if(input<random)
+			console.log('The NUMBER IS GREATOR THAN '+input);
+		else if(input>random)
+			console.log('THE NUMBER IS LESS THAN '+input);
+		else 
+			console.log('YOU WON')
+	}
+</script>
+	<h1>WELCOME</h1> 
+	<h3>ENTER THE NUMBER BELOW</h3> 
+	<input type="text" id="userinput">
+	<button onclick="random_number()">SUBMIT</button>
+
+</body>
+</html>
