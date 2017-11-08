@@ -5,24 +5,26 @@
 </head>
 <body>
 	<script type="text/javascript">
-	function random_number()
-	{
 		var a= new Date();
 		var b=a.getTime();
 		var random=b%100;
-		console.log(random);
+	function random_number()
+	{
 		var input=document.getElementById("userinput").value ;
 		console.log(input);
 		if(input<random)
 			console.log('The NUMBER IS GREATOR THAN '+input);
 		else if(input>random)
 			console.log('THE NUMBER IS LESS THAN '+input);
-		else 
-			console.log('YOU WON')
+		else if(input==random)
+			console.log('YOU WON');
+		else
+			console.log('ENTER A VALID INPUT')
 	}
 </script>
-	<h1>WELCOME</h1> 
-	<h3>ENTER THE NUMBER BELOW</h3> 
+	<h1>WELCOME TO THE GUESSING GAME </h1> 
+	<p>( IN THIS GAME SYSTEM GENERATES A RANDOM NUMBER. ALL YOU NEED TO DO IS GUESS THE NUMBER BY THE HINTS PROVIDED IN THE CONSOLE WINDOW ) </p>
+	<h3>ENTER THE NUMBER TO CHECK IF YOU HAVE GUESSED IT RIGHT OR NOT !</h3> 
 	<input type="text" id="userinput">
 	<button onclick="random_number()">SUBMIT</button>
 
