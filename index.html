@@ -26,18 +26,35 @@
 		document.getElementById("counter").innerHTML = counter;
 		if(input<100&&input>=0)
 		{
-			++counter;
 			if(input<random)
 			{
-				min=input;
-				document.getElementById("ll").innerHTML = min;
-				document.getElementById("ul").innerHTML = max;	
+				if(input>min)
+				{
+					++counter;
+					min=input;
+					document.getElementById("ll").innerHTML = min;
+					document.getElementById("ul").innerHTML = max;	
+				}
+				else{
+					++counter;
+					document.getElementById("ll").innerHTML = min;
+					document.getElementById("ul").innerHTML = max;	
+				}	
 			}
 			else if(input>random)
 			{
-				max=input;
-				document.getElementById("ll").innerHTML = min;
-				document.getElementById("ul").innerHTML = max;
+				if(input<max)
+				{
+					++counter;
+					max=input;
+					document.getElementById("ll").innerHTML = min;
+					document.getElementById("ul").innerHTML = max;
+				}
+				else{
+						++counter;
+						document.getElementById("ll").innerHTML = min;
+						document.getElementById("ul").innerHTML = max;	
+					}
 			}
 			else if(input==random)
 			{
